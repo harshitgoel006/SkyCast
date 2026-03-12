@@ -99,28 +99,30 @@ function WeeklyForecast({ forecast, isNight }) {
 
 
               {/* Temperature Display */}
-              <div className="flex items-center gap-8 w-72 justify-end">
-                <span className={`text-sm font-black w-12 text-right ${isNight ? 'text-white/30' : 'text-slate-400'}`}>
-                  {Math.round(day.low)}°
-                </span>
+             {/* Temperature Display */}
+<div className="flex items-center gap-6 min-w-[140px] justify-end">
 
+  <span className={`text-sm font-black w-12 text-right ${isNight ? 'text-white/30' : 'text-slate-400'}`}>
+    {Math.round(day.low)}°
+  </span>
 
-                {/* Animated Range Bar */}
-                <div className={`h-[6px] flex-1 max-w-[140px] rounded-full relative overflow-hidden ${
-                  isNight ? 'bg-white/5' : 'bg-slate-200/50'
-                }`}>
-                  <motion.div
-                    initial={{ width: 0 }}
-                    animate={{ width: "70%" }}
-                    transition={{ duration: 1.5, ease: "easeOut", delay: index * 0.1 }}
-                    className="absolute right-0 h-full rounded-full bg-gradient-to-r from-blue-500 to-indigo-600 shadow-[0_0_10px_rgba(59,130,246,0.5)]"
-                  />
-                </div>
+  {/* Animated Range Bar */}
+  <div className={`h-[6px] flex-1 max-w-[140px] rounded-full relative overflow-hidden ${
+    isNight ? 'bg-white/5' : 'bg-slate-200/50'
+  }`}>
+    <motion.div
+      initial={{ width: 0 }}
+      animate={{ width: "70%" }}
+      transition={{ duration: 1.5, ease: "easeOut", delay: index * 0.1 }}
+      className="absolute right-0 h-full rounded-full bg-gradient-to-r from-blue-500 to-indigo-600 shadow-[0_0_10px_rgba(59,130,246,0.5)]"
+    />
+  </div>
 
-                <span className={`text-3xl font-black tracking-tighter w-16 text-right ${isNight ? 'text-white' : 'text-slate-900'}`}>
-                  {Math.round(day.high)}°
-                </span>
-              </div>
+  <span className={`text-3xl font-black tracking-tighter w-20 text-right ${isNight ? 'text-white' : 'text-slate-900'}`}>
+    {Math.round(day.high)}°
+  </span>
+
+</div>
 
             </motion.div>
           );
