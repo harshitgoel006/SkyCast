@@ -12,13 +12,7 @@ The application integrates live weather APIs to display current weather conditio
 
 ---
 
-## 📸 Preview
 
-![SkyCast Preview](./preview.png)
-
-*(Add your project screenshot here for better presentation)*
-
----
 
 ## ✨ Features
 
